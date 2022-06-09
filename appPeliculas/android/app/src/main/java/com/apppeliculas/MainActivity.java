@@ -36,5 +36,10 @@ public class MainActivity extends ReactActivity {
       reactRootView.setIsFabric(BuildConfig.IS_NEW_ARCHITECTURE_ENABLED);
       return reactRootView;
     }
+    //se agrega de documentacion https://reactnavigation.org/docs/getting-started/ para funcionar navigation en android
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+    }
   }
 }
