@@ -1,7 +1,7 @@
-/* eslint-disable prettier/prettier */
-import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
-import {styles} from '../theme/appTheme';
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import { styles } from "../theme/appTheme";
+
 
 interface Props {
   texto: string;
@@ -11,7 +11,7 @@ interface Props {
   action: ( numeroTexto: string ) => void;
 }
 
-export const BotonCalculadora = ({texto, color = '#2D2D2D', ancho = false, action }:Props) => {
+const BotonCalculadora = ({texto, color = '#2D2D2D', ancho = false, action }:Props) => {
   return (
     <TouchableOpacity
       onPress={() => action(texto)}>
@@ -23,3 +23,5 @@ export const BotonCalculadora = ({texto, color = '#2D2D2D', ancho = false, actio
     
   );
 };
+
+export default BotonCalculadora

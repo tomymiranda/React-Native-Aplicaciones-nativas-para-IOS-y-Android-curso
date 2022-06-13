@@ -1,11 +1,11 @@
-/* eslint-disable prettier/prettier */
-import React from 'react';
-import {Text, View} from 'react-native';
-import { BotonCalculadora } from '../components/BotonCalculadora';
-import { styles } from '../theme/appTheme';
-import { useCalculadora } from '../hooks/useCalculadora';
+import React from "react";
+import { Text, View } from "react-native";
+import BotonCalculadora  from "../components/BotonCalculadora";
+import useCalculadora from "../hooks/useCalculadora";
+import { styles } from "../theme/appTheme";
 
-export const CalculadoraScreen = () => {
+
+const CalculadoraScreen = () => {
   //se importa funciones de useCalculadora hook
   const {
     numeroAnterior,
@@ -77,3 +77,5 @@ export const CalculadoraScreen = () => {
     </View>
   );
 };
+
+export default CalculadoraScreen;

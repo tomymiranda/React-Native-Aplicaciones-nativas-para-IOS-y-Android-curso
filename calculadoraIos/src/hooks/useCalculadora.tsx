@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+
 import {useState, useRef} from 'react';
 
 //los hooks es mejor usarlos para las funciones
@@ -10,7 +10,7 @@ enum Operaciones {
   dividir = '/',
 }
 
-export const useCalculadora = () => {
+const useCalculadora = () => {
   const [numeroAnterior, setNumeroAnterior] = useState('');
   const [numero, setNumero] = useState('0');
   const ultOperacion = useRef<Operaciones>();
@@ -144,3 +144,5 @@ export const useCalculadora = () => {
     calcular,
   };
 };
+
+export default useCalculadora;
