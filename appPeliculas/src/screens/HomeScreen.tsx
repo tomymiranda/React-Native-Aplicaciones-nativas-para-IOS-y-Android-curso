@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 
-//posible solucion para el problema de que
+//posible solucion para el problema de pasarle un nombre al navigation
 type Nav = {
   navigate: (value: string) => void;
 };
