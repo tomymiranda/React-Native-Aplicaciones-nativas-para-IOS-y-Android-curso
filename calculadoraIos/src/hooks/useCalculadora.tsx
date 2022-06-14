@@ -1,4 +1,3 @@
-
 import {useState, useRef} from 'react';
 
 //los hooks es mejor usarlos para las funciones

@@ -1,12 +1,12 @@
-import React from "react";
-import { Text, View } from "react-native";
-import BotonCalculadora  from "../components/BotonCalculadora";
-import useCalculadora from "../hooks/useCalculadora";
-import { styles } from "../theme/appTheme";
-
+import React from 'react';
+import {Text, View} from 'react-native';
+import BotonCalculadora from '../components/BotonCalculadora';
+import useCalculadora from '../hooks/useCalculadora';
+import {styles} from '../theme/appTheme';
 
 const CalculadoraScreen = () => {
   //se importa funciones de useCalculadora hook
+  
   const {
     numeroAnterior,
     numero,
