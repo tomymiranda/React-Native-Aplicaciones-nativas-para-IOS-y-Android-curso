@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import {Button, Text, View} from 'react-native';
-import movieDB from '../api/MovieDB';
+import movieDB from '../api/movieDB'
 /* esto va arriba del export const HomeScreen = () => { 
 type Nav = {
   navigate: (value: string) => void;
