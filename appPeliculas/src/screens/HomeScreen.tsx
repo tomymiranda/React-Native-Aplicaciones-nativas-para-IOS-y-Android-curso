@@ -1,6 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import {ActivityIndicator, Button, Text, View} from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { MoviePoster } from '../components/MoviePoster';
 import { useMovies } from '../hooks/useMovies';
 
 /* esto va arriba del export const HomeScreen = () => { 
@@ -20,6 +22,7 @@ const navigation = useNavigation<Nav>();
 export const HomeScreen = () => {
   
  const{peliculasEnCine, isLoading} = useMovies();
+ const{top} = useSafeAreaInsets();
 
  if(isLoading){
   return(
@@ -29,8 +32,10 @@ export const HomeScreen = () => {
   )
  }
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View style={{marginTop:top + 20}}>
+      <MoviePoster
+        movie={peliculasEnCine[0]}
+      />
     </View>
   );
 };
