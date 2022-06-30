@@ -1,7 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
-import React, { useEffect } from 'react';
-import {Button, Text, View} from 'react-native';
-import movieDB from '../api/movieDB'
+import React, { useEffect, useState } from 'react';
+import {ActivityIndicator, Button, Text, View} from 'react-native';
+import { useMovies } from '../hooks/useMovies';
+
 /* esto va arriba del export const HomeScreen = () => { 
 type Nav = {
   navigate: (value: string) => void;
@@ -18,15 +19,15 @@ const navigation = useNavigation<Nav>();
 
 export const HomeScreen = () => {
   
-  useEffect(() => {
-    
-    movieDB.get('/now_playing').then(response => {
-      console.log(response.data)
-    })
+ const{peliculasEnCine, isLoading} = useMovies();
 
-  }, []);
-  
-
+ if(isLoading){
+  return(
+    <View style={{flex:1, justifyContent: 'center',alignContent: 'center'}}>
+      <ActivityIndicator color ="red" size={100} />
+    </View>
+  )
+ }
   return (
     <View>
       <Text>HomeScreen</Text>
